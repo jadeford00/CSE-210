@@ -1,44 +1,12 @@
+using System;
+using System.Threading;
+
 public abstract class Meditation
 {
-    private int _duration;
+    public abstract double Breath();
 
-    public Meditation(int duration)
+    public virtual void Quote()
     {
-        _duration = duration;
+        Console.WriteLine("Relax and clear your mind");
     }
-    
-    public int GetDuration()
-    {
-        return _duration;
-    }
-
-    public void SetDuration(int duration)
-    {
-        _duration = duration;
-    }
-
-    // public void SetDuration(int duration)
-    // {   
-    //     _duration = duration;
-    //     Console.WriteLine("How long would you like to do this activity? ");
-    //     string input = Console.ReadLine();
-    // }
-
-    public abstract double DisplayStarting();
- 
-    public abstract double DisplayEnding();
-
-} 
-
-
-    //       public int DisplayDuration()
-    // {
-    //     Console.WriteLine("How long would you like to do this activity? ");
-    //     string input = Console.ReadLine();
-
-    //     for (int i = _duration; i > 0; i--)
-    //     {
-    //         Console.WriteLine(i);
-    //         Thread.Sleep(1000);
-    //     }
-    // }
+}
